@@ -16,7 +16,7 @@ namespace HealthCatalyst
                 .Include("~/Scripts/bootstrap.js")
                 .Include("~/Scripts/bootstrap-datepicker.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/app.api")
+            bundles.Add(new ScriptBundle("~/bundles/app-api")
                 .Include("~/Scripts/app.api.js"));
 
             bundles.Add(new StyleBundle("~/Content/css")
