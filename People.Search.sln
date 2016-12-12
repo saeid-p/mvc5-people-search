@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Search", "Web.MVC\People.Search.csproj", "{7DB412E2-DEBE-4C27-B7E2-CC5C46F5E2B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Search", "People.Search.Web.MVC\People.Search.csproj", "{7DB412E2-DEBE-4C27-B7E2-CC5C46F5E2B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Search.Test", "People.Search.Test\People.Search.Test.csproj", "{2E3CB60B-D7EE-462B-89E0-9A0CD8DDE07E}"
 EndProject
