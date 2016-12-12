@@ -25,7 +25,9 @@ The first time you run the application, EF seeds some sample records to display 
 * Microsoft.AspNet.WebPages version="3.2.3"
 * Microsoft.Web.Infrastructure version="1.0.0.0"
 * WebGrease version="1.6.0"s
+
 -------
+
 * jQuery version="3.1.1"
 * jQuery.Validation version="1.16.0"
 * Microsoft.jQuery.Unobtrusive.Validation version="3.2.3"
