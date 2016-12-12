@@ -1,0 +1,26 @@
+﻿@{ ViewBag.Title = "People Search Prototype"; }
+
+@Html.Partial("Partials/SearchBox")
+
+@Html.Partial("Partials/PeopleList")
+
+@Html.Partial("Partials/PersonCardTemplate")
+
+@Html.Partial("Partials/NoResultTemplate")
+
+@Html.Partial("Partials/InterestInputTemplate")
+
+<div id="Modal-Container"></div>
+
+@section FooterScripts
+{
+    <script type="text/javascript">
+        appUrls.SearchApi = "@Url.Action("Search", "Home")";
+        appUrls.AddPersonModal = "@Url.Action("AddPersonModal", "Home")";
+        appUrls.AddPerson = "@Url.Action("AddPerson", "Home")";
+        appUrls.EditPersonPicture = "@Url.Action("EditPersonPicture", "Home")";
+        appUrls.GetPersonPictureApi = "@Url.Action("GetPersonPicture", "Home")/";
+        appApi.DataSource = @Html.Raw(Model);
+    </script>
+    @Scripts.Render("~/bundles/pages/home/index")
+}

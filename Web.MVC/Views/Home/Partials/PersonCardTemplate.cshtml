@@ -1,0 +1,19 @@
+﻿<script id="Person-Card-Template" type="text/x-custom-template">
+    <div class="col-md-4 col-sm-6 margin-ex-bottom-20">
+        <div class="search-result-box clearfix">
+            <div class="person-picture pull-left">
+                <img src="@Url.Action("GetPersonPicture", "Home")/{{PersonId}}" class="thumbnail" alt="Person Picture." width="100" />
+            </div>
+            <h4 class="person-name">
+                <strong>{{FullName}}</strong>
+                <span class="small">{{Age}}</span>
+            </h4>
+            <div class="person-address">
+                <address>{{Address}}</address>
+            </div>
+            <div class="interests">
+                <span class="h5 margin-ex-right">Likes:</span>
+            </div>
+        </div>
+    </div>
+</script>

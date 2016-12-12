@@ -1,0 +1,85 @@
+﻿@model HealthCatalyst.Models.PersonModel
+
+<div class="modal fade" id="Active-Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm())
+            {
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">
+                        <i class="fa fa-plus margin-ex-right"></i>
+                        <span>Add New Person</span>
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 form-group margin-ex-bottom-10">
+                            <label for="@Html.IdFor(m => m.FirstName)" class="control-label">First Name: (*)</label>
+                            @Html.TextBoxFor(m => m.FirstName, new {@class = "form-control", maxLength = "40"})
+                            @Html.ValidationMessageFor(m => m.FirstName, "", new {@class = "text-danger"})
+                        </div>
+
+                        <div class="col-md-6 form-group margin-ex-bottom-10">
+                            <label for="@Html.IdFor(m => m.LastName)" class="control-label">Last Name: (*)</label>
+                            @Html.TextBoxFor(m => m.LastName, new {@class = "form-control", maxLength = "40"})
+                            @Html.ValidationMessageFor(m => m.LastName, "", new {@class = "text-danger"})
+                        </div>
+
+                        <div class="col-md-6 form-group margin-ex-bottom-10">
+                            <label for="@Html.IdFor(m => m.BirthDate)" class="control-label">Birth Date:</label>
+                            <div id="BirthDateContainer" class="input-group date">
+                                @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control", maxLength = "10" })
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-th"></i>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(m => m.BirthDate, "", new {@class = "text-danger"})
+                        </div>
+
+                        <div class="col-md-6 form-group margin-ex-bottom-10">
+                            <label class="control-label">Picture:</label>
+                            <div>
+                                <label for="@Html.IdFor(m => m.Picture)" class="btn btn-info btn-file">
+                                    <i class="fa fa-upload margin-ex-right"></i>
+                                    <span>Browse</span>
+                                    <input id="Picture" name="Picture" type="file" class="form-control">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-group margin-ex-bottom-10">
+                            <label for="@Html.IdFor(m => m.Address)" class="control-label">Address:</label>
+                            @Html.TextAreaFor(m => m.Address, new {@class = "form-control", rows = "2", maxLength = "100"})
+                            @Html.ValidationMessageFor(m => m.Address, "", new {@class = "text-danger"})
+                        </div>
+                        
+                        <div class="col-md-12 form-group margin-ex-bottom-10">
+                            <h4>
+                                <span class="label label-primary">
+                                    <span class="margin-ex-right">Interests</span>
+                                    <button id="Add-Interest-Button" type="button" class="btn-label" tabindex="-1">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </span>
+                            </h4>
+                            <div id="Interests-Container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <i class="fa fa-remove margin-ex-right"></i>
+                        <span>Cancel</span>
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save margin-ex-right"></i>
+                        <strong>Save</strong>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
